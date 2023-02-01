@@ -1,3 +1,3 @@
 export default function CheckoutPage() {
-  return <main>Hello World</main>;
+  return <main>Checkout</main>;
 }

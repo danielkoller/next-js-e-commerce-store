@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+*,
+* ::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$font-stack: 'Lato', sans-serif;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-stack;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 1.5;
+  margin: 0 10px;
+  background-color: #fbeec1;
+}

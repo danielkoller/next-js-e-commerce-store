@@ -1,7 +1,7 @@
 export default function ProductHead() {
   return (
     <>
-      <title>Homepage</title>
+      <title>Product</title>
       <meta
         name="description"
         content="Buy Second Hand Clothing in your area"

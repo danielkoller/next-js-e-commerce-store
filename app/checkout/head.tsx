@@ -1,7 +1,7 @@
 export default function CheckoutHead() {
   return (
     <>
-      <title>Homepage</title>
+      <title>Checkout</title>
       <meta
         name="description"
         content="Buy Second Hand Clothing in your area"
