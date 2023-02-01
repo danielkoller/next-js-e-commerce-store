@@ -1,5 +1,6 @@
 import './global.scss';
 import Link from 'next/link';
+import styles from './layout.module.scss';
 
 export default function RootLayout({
   children,
@@ -14,7 +15,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <header>
+        <header className={styles.header}>
           <nav>
             <Link href="/">Home</Link>
             <Link href="/cart">Cart</Link>
