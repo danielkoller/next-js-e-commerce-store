@@ -1,7 +1,7 @@
-export default function RootHead() {
+export default function CartHead() {
   return (
     <>
-      <title>Homepage</title>
+      <title>Cart</title>
       <meta
         name="description"
         content="Buy Second Hand Clothing in your area"

@@ -1,4 +1,4 @@
-export default function RootHead() {
+export default function ProductsHead() {
   return (
     <>
       <title>Homepage</title>
