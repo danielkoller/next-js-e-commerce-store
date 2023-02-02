@@ -1,6 +1,6 @@
-import { bikes } from 'database/database.tsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { bikes } from '../../database/database.tsx';
 import styles from './page.module.scss';
 
 export default function ProductsPage() {

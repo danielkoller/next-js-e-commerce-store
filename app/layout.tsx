@@ -18,8 +18,8 @@ export default function RootLayout({
         <header className={styles.header}>
           <nav>
             <Link href="/">Home</Link>
-            <Link data-test-id="products-link" href="/products">
-              Products
+            <Link data-test-id="products-link" href="/bikes">
+              Bikes
             </Link>
             <Link href="/cart">Cart</Link>
             <Link href="/checkout">Checkout</Link>
