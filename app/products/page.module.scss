@@ -1,0 +1,23 @@
+.h1 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+.bikes {
+  border: 1px solid #826251;
+  margin: 10px;
+  border-radius: 10%;
+  width: 450px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(#826251, 0.5);
+
+  h2 {
+    font-weight: 700;
+  }
+}

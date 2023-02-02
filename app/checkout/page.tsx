@@ -1,7 +1,7 @@
 export default function CheckoutPage() {
   return (
     <main>
-      <h1>Checkout</h1> <h1>💁 Guest List</h1>
+      <h1>Checkout</h1>
       <form>
         <label htmlFor="firstName">First name</label>
         <input

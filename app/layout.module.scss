@@ -1,6 +1,24 @@
 .header {
   nav {
     overflow: hidden;
-    background-color: #659dbd;
+    background-color: #ffe8d1;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
   }
+
+  a {
+    text-decoration: none;
+    padding-top: 8px;
+    color: #568ea3;
+  }
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #ffe8d1;
+  height: 50px;
+  text-align: center;
+  padding-top: 8px;
+  color: #568ea3;
 }
