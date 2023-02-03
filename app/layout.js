@@ -2,11 +2,7 @@ import './global.scss';
 import Link from 'next/link';
 import styles from './layout.module.scss';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/*
