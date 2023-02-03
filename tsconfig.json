@@ -25,12 +25,15 @@
     }
   },
   "include": [
-    "next-env.d.ts",
+    "**/.eslintrc.cjs",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.mjs",
     ".next/types/**/*.ts",
-    "database/database.js",
-    "app/bikes/[bikeName]/page.tsx"
+    "next-env.d.ts"
   ],
   "exclude": ["node_modules"]
 }

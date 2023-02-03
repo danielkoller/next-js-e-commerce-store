@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className={styles.body}>
         <header className={styles.header}>
           <nav>
             <Link href="/">Home</Link>
