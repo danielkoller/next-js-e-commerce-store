@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { bikes } from '../../database/database.js';
+import { getBikes } from '../../database/database.js';
 import styles from './page.module.scss';
 
-export default function ProductsPage() {
+export default async function BikesPage() {
+  const bikes = await getBikes();
   return (
     <>
       <h1 className={styles.h1}>Find all the bikes here</h1>

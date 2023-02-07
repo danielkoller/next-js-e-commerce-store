@@ -1,14 +1,18 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { bikes } from '../../../database/database.js';
+import { bikes, getBike } from '../../../database/database.js';
 import styles from './page.module.scss';
 
 export const dynamic = 'force-dynamic';
 
-export default function ProductPage(props) {
+export default async function ProductPage(props) {
   const singleBike = bikes.find((bike) => {
     return bike.name.toLowerCase() === props.params.bikeName;
   });
+
+  // Implement the following function, when database is fixed
+
+  // const singleBike = await getBike(props.params.bikeName);
 
   // When the singleBike-Page is not found, we throw an error message.
   if (!singleBike) {
