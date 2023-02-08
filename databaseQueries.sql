@@ -3,7 +3,7 @@ CREATE TABLE bikes (
   id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   name varchar(50) NOT NULL,
   description varchar(50) NOT NULL,
-  longer_description varchar(1000) NOT NULL,
+  longer_description varchar(500) NOT NULL,
   img varchar(50) NOT NULL,
   price integer NOT NULL
 );
@@ -56,7 +56,7 @@ VALUES
   (
     'Cervelo',
     'A road bike when money is no object ',
-    'The R5 has only one task: to get to the top quickly. Even though glory and plenty of fans await at a mountain finish, that is usually not the only climb of the day. And while most races are not won on the descents, they can certainly be lost there. A mountain climb that can not handle a switchback feels like a cup of decaf. The R5 is now in its fourth iteration. While weight and stiffness have changed over the years, handling, balance and unmatched downhill prowess have remained the same since day one.',
+    'The R5 has only one task: to get to the top quickly. Even though glory and plenty of fans await at a mountain finish, that is usually not the only climb of the day. And while most races are not won on the descents, they can certainly be lost there.',
     '/images/Cervelo.png',
     4000
   );
