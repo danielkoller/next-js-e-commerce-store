@@ -1,6 +1,6 @@
 import './global.scss';
 import Link from 'next/link';
-import CookieBanner from './cookieBanner';
+import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
 export default function RootLayout({ children }) {
