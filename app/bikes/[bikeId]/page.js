@@ -5,17 +5,9 @@ import styles from './page.module.scss';
 export const dynamic = 'force-dynamic';
 
 export default async function ProductPage({ params }) {
-  console.log(params);
-  // const singleBike = bikes.find((bike) => {
-  //   return bike.name.toLowerCase() === props.params.bikeName;
-  // });
-
-  // Implement the following function, when database is fixed
-
   const singleBike = await getBike(params.bikeId);
-  console.log(params.bikeId);
 
-  // When the singleBike-Page is not found, we throw an error message.
+  // // When the singleBike-Page is not found, we throw an error message.
   // if (!singleBike) {
   //   notFound();
   // }
