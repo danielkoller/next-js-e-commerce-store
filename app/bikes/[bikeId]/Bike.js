@@ -49,34 +49,34 @@ export default function Bike(props) {
             data-test-id="product-add-to-cart"
             onClick={() => {
               // Get Cookie
-              const productInCookies = getParsedCookie('cart');
+              const productsInCookies = getParsedCookie('cart');
               // Cookie does not exist, we initialize it with our useState-value
-              if (!productInCookies) {
+              if (!productsInCookies) {
                 setStringifiedCookie('cart', [
                   { id: props.bike.id, amount: count },
-                  console.log(props.bike.id),
                 ]);
 
                 return;
               }
 
-              const foundBike = productInCookies.find((bikeInCookies) => {
-                return bikeInCookies.id === props.bike.id;
-              });
+              const foundProduct = productsInCookies.find(
+                (productInCookies) => {
+                  return productInCookies.id === props.bike.id;
+                },
+              );
               // Bike is inside the Cookies
-              if (foundBike) {
-                foundBike.amount = count;
-                console.log(foundBike);
+              if (foundProduct) {
+                foundProduct.amount = count;
                 // If it is not inside the Cookie, we push it in the Cookies
               } else {
-                productInCookies.push({
+                productsInCookies.push({
                   id: props.bike.id,
                   amount: count,
                 });
               }
 
               // Update the Cookies with the new values
-              setStringifiedCookie('cart', productInCookies);
+              setStringifiedCookie('cart', productsInCookies);
               setCount(1);
             }}
           >
