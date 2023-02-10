@@ -66,7 +66,7 @@ export default function Bike(props) {
               );
               // Bike is inside the Cookies
               if (foundProduct) {
-                foundProduct.amount = count;
+                foundProduct.amount += count;
                 // If it is not inside the Cookie, we push it in the Cookies
               } else {
                 productsInCookies.push({

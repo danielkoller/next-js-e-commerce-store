@@ -9,9 +9,9 @@ export function Cart({ bikes }) {
     bikesCookieParsed = JSON.parse(bikesCookie.value);
   }
 
-  let bikesInCart = [];
+  // let bikesInCart = [];
 
-  bikesInCart = bikes.map((bike) => {
+  const bikesInCart = bikes.map((bike) => {
     const bikeInCart = { ...bike, amount: 0 };
 
     const bikeInCookie = bikesCookieParsed.find(
@@ -30,16 +30,16 @@ export function Cart({ bikes }) {
     total += bike.price * bike.amount;
   });
 
+  const cartItems = bikesInCart.filter((bike) => bike.amount > 0);
+
   return (
     <div>
       <ul>
-        {bikesInCart
-          .filter((bike) => bike.amount > 0)
-          .map((bike) => (
-            <li key={bike.id}>
-              {bike.name} ({bike.amount})
-            </li>
-          ))}
+        {cartItems.map((bike) => (
+          <li key={bike.id}>
+            {bike.name} ({bike.amount})
+          </li>
+        ))}
       </ul>
       <p>Total: {total} €</p>
     </div>

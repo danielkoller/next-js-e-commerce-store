@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
             <Link data-test-id="products-link" href="/bikes">
               Bikes
             </Link>
-            <Link href="/cart">Cart</Link>
+            <a href="/cart">Cart</a>
             <Link href="/checkout">Checkout</Link>
           </nav>
         </header>
