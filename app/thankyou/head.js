@@ -1,11 +1,8 @@
 export default function ThankyouHead() {
   return (
     <>
-      <title>Homepage</title>
-      <meta
-        name="description"
-        content="Buy Second Hand Clothing in your area"
-      />
+      <title>Thank you for your order</title>
+      <meta name="description" content="We thank you for your order!" />
       <link rel="icon" href="/favicon.ico" />
     </>
   );

@@ -1,10 +1,12 @@
 'use client';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { getParsedCookie, setStringifiedCookie } from '../../../utils/cookies';
 import styles from './page.module.scss';
 
 export default function Bike(props) {
+  const router = useRouter();
   const [count, setCount] = useState(1);
   return (
     <>
@@ -78,6 +80,7 @@ export default function Bike(props) {
               // Update the Cookies with the new values
               setStringifiedCookie('cart', productsInCookies);
               setCount(1);
+              router.refresh();
             }}
           >
             Add to cart

@@ -1,5 +1,6 @@
 import './global.scss';
 import Link from 'next/link';
+import CartCount from './CartCount';
 import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className={styles.body}>
+      <body>
         <CookieBanner />
         <header className={styles.header}>
           <nav>
@@ -19,8 +20,9 @@ export default function RootLayout({ children }) {
             <Link data-test-id="products-link" href="/bikes">
               Bikes
             </Link>
-            <Link href="/cart">Cart </Link>
-            <Link href="/checkout">Checkout</Link>
+            <Link data-test-id="cart-link" href="/cart">
+              Cart (<CartCount />)
+            </Link>
           </nav>
         </header>
         {children}
