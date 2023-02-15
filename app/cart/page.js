@@ -2,6 +2,7 @@ import { cookies } from 'next/headers';
 import Link from 'next/link';
 import { getBikes } from '../../database/database.js';
 import CartDelete from './Cart';
+import TotalAmount from './TotalAmount.tsx';
 
 export default async function CartPage() {
   const allBikes = await getBikes();
@@ -27,11 +28,6 @@ export default async function CartPage() {
     return bikeInCart;
   });
 
-  let total = 0;
-  bikesInCart.forEach((bike) => {
-    total += bike.price * bike.amount;
-  });
-
   const cartItems = bikesInCart.filter((bike) => bike.amount > 0);
 
   return (
@@ -51,7 +47,9 @@ export default async function CartPage() {
           </li>
         ))}
       </ul>
-      <p data-test-id="cart-total">Total: {total} €</p>
+      <p data-test-id="cart-total">
+        Total: <TotalAmount /> €
+      </p>
       <button data-test-id="cart-checkout">
         <Link href="/checkout">Checkout</Link>
       </button>

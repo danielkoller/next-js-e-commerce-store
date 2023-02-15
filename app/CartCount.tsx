@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 
 export default function CartCount() {
   const cartCookie = cookies().get('cart');
-  let cartItems = [];
+  let cartItems: { amount: number }[] = [];
   if (cartCookie) {
     cartItems = JSON.parse(cartCookie.value);
   }

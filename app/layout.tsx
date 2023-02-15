@@ -4,7 +4,11 @@ import CartCount from './CartCount';
 import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: React.ReactNode,
+};
+
+export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
     <html lang="en">
       {/*
@@ -27,8 +31,7 @@ export default function RootLayout({ children }) {
         </header>
         {children}
         <footer className={styles.footer}>
-          A lot of sweat, anger and frustration from Daniel Koller went into
-          this project.
+          Treat yourself to premium bikes at a bargain price
         </footer>
       </body>
     </html>
