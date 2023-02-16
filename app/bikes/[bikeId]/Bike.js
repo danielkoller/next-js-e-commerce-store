@@ -26,25 +26,27 @@ export default function Bike(props) {
         </div>
         <div className={styles.price}>Only {props.bike.price} €</div>
         <div className={styles.buyDiv}>
-          <input readOnly value={count} />
-          <button
-            onClick={() => {
-              if (count <= 1) {
-                setCount(1);
-              } else {
-                setCount(count - 1);
-              }
-            }}
-          >
-            -
-          </button>
-          <button
-            onClick={() => {
-              setCount(count + 1);
-            }}
-          >
-            +
-          </button>
+          <input className={styles.input} readOnly value={count} />
+          <div className={styles.counter}>
+            <button
+              onClick={() => {
+                if (count <= 1) {
+                  setCount(1);
+                } else {
+                  setCount(count - 1);
+                }
+              }}
+            >
+              -
+            </button>
+            <button
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              +
+            </button>
+          </div>
 
           <button
             className={styles.buyButton}
