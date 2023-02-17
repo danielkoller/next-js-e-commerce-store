@@ -1,27 +1,136 @@
-.header {
-  nav {
-    overflow: hidden;
-    background-color: #ffe8d1;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
+.container {
+  max-width: 1200px;
+  display: grid;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+
+  img {
+    display: block;
+    margin-right: 50px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   a {
     text-decoration: none;
-    padding-top: 8px;
-    color: #568ea3;
+    color: black;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: justify;
+  }
+}
+
+.header {
+  nav {
+    overflow: hidden;
+    background-color: #ffe8d1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+
+  img:first-of-type {
+    margin-top: 25px;
+  }
+
+  a:first-of-type {
+    margin-right: auto;
+    padding: 0 10px;
+    width: 100px; /* Added fixed width for the first link */
+  }
+
+  a:last-of-type {
+    margin-left: 40%; /* Adjusted to move the last link a bit more to the left */
+    width: 80px; /* Added fixed width for the last link */
+  }
+
+  a {
+    text-decoration: none;
+    color: #6c83b4;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+
+  .cart {
+    margin-right: 20px !important;
   }
 }
 
 .footer {
   overflow: hidden;
   background-color: #ffe8d1;
-  min-height: 50px;
-
+  min-height: 70px;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 18px;
+  justify-content: center;
   color: #568ea3;
+  font-weight: 600;
+  font-size: 1.4rem;
   bottom: 0;
   width: 100%;
+}
+
+.imgButton {
+  display: flex;
+  gap: 30px;
+  justify-content: left;
+  align-items: center;
+}
+
+.findButton {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 23px 43px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: auto;
+
+  &:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow 0.2s;
+  }
+
+  &:active {
+    background-color: #f7f7f7;
+    border-color: #000000;
+    transform: scale(0.96);
+  }
+
+  &:disabled {
+    border-color: #dddddd;
+    color: #dddddd;
+    cursor: not-allowed;
+    opacity: 1;
+  }
 }

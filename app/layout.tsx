@@ -1,11 +1,12 @@
 import './global.scss';
+import Image from 'next/image';
 import Link from 'next/link';
 import CartCount from './CartCount';
 import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
 type RootLayoutProps = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
 
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
@@ -20,12 +21,18 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         <CookieBanner />
         <header className={styles.header}>
           <nav>
+            <Image
+              src="/images/Logo without Subtext.png"
+              width="100"
+              height="100"
+              alt="Bike Shop Logo"
+            />
             <Link href="/">Home</Link>
             <Link data-test-id="products-link" href="/bikes">
               Bikes
             </Link>
-            <Link data-test-id="cart-link" href="/cart">
-              Cart (<CartCount />)
+            <Link className={styles.cart} data-test-id="cart-link" href="/cart">
+              🛒 (<CartCount />)
             </Link>
           </nav>
         </header>

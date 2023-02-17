@@ -40,9 +40,12 @@ export default async function CartPage() {
           {cartItems.map((bike) => (
             <li key={bike.id} data-test-id={`cart-product-${bike.id}`}>
               <Image src={bike.img} width="200" height="100" alt="roadbike" />
-              <b>{bike.name}</b> {bike.price} €
+              <p>
+                <b>{bike.name}</b> <br />
+                {bike.price} €
+              </p>
               <div data-test-id={`cart-product-quantity-${bike.id}`}>
-                [{bike.amount} Bike(s)]
+                <p>[{bike.amount} Bike]</p>
                 <CartDelete
                   data-test-id={`cart-product-remove-${bike.id}`}
                   parsedData={bikesCookieParsed}
@@ -52,18 +55,16 @@ export default async function CartPage() {
             </li>
           ))}
         </ul>
-        <div className={styles.totalSection}>
-          <p data-test-id="cart-total">
-            <b> Total:</b> <TotalAmount /> €
-          </p>
-        </div>
       </div>
       <div className={styles.buySection}>
-        <button className={styles.buyButton} data-test-id="cart-checkout">
-          <Link className={styles.Link} href="/checkout">
+        <p data-test-id="cart-total">
+          <b> Total:</b> <TotalAmount /> €
+        </p>
+        <Link className={styles.Link} href="/checkout">
+          <button className={styles.buyButton} data-test-id="cart-checkout">
             Checkout
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
     </div>
   );

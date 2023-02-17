@@ -3,11 +3,31 @@
 }
 
 .cartContainer {
+  list-style: none;
   display: grid;
-  justify-items: center;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 
   li {
-    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+
+    img {
+      margin-right: 10px;
+      width: 50%;
+      height: 50%;
+    }
+
+    p {
+      margin: 10px;
+      font-size: 22px;
+    }
   }
 }
 
@@ -18,8 +38,7 @@
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   height: 40px;
   line-height: 20px;
@@ -27,7 +46,6 @@
   margin: 0;
   outline: none;
   padding: 10px 16px;
-  position: relative;
   text-align: center;
   text-decoration: none;
   transition: color 100ms;
@@ -51,7 +69,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
@@ -90,11 +108,7 @@
   display: grid;
   justify-items: center;
   align-self: center;
-}
-
-.totalSection {
-  display: grid;
-  justify-items: center;
+  font-size: 2rem;
 }
 
 .Link {

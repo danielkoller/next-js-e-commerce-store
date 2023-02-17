@@ -34,25 +34,25 @@ export default async function CheckoutPage() {
     <div>
       <div className={styles.wrapper}>
         <h1>Checkout</h1>
-        <h2>You will ride very soon with this machine!</h2>
-        <ul>
-          {cartItems.map((bike) => (
-            <li key={bike.id} data-test-id={`cart-product-${bike.id}`}>
-              <b>{bike.name}</b> {bike.price} €
-              <div data-test-id={`cart-product-quantity-${bike.id}`}>
-                [{bike.amount} Bike(s)]
-                <Image
-                  src={bike.img}
-                  width="200"
-                  height="100"
-                  alt="Chosen Bike"
-                />
-              </div>
-            </li>
-          ))}
-        </ul>
+        <h2>You will be riding this machine very soon</h2>
+        <div className={styles.cartContainer}>
+          <ul>
+            {cartItems.map((bike) => (
+              <li key={bike.id} data-test-id={`cart-product-${bike.id}`}>
+                <Image src={bike.img} width="200" height="100" alt="roadbike" />
+                <p>
+                  <b>{bike.name}</b> <br />
+                  {bike.price} €
+                </p>
+                <div data-test-id={`cart-product-quantity-${bike.id}`}>
+                  <p>[{bike.amount} Bike]</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
         <h4>
-          Pay <TotalAmount />€ and get your bike in no time. (Shipping Included)
+          Total Sum: <TotalAmount /> € (Shipping Included)
         </h4>
         <h3>🛒 Shipping Details</h3>
         <form className={styles.checkoutForm} action="/thankyou">
