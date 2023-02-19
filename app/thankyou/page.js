@@ -36,7 +36,7 @@ export default async function ThankyouPage() {
       </h1>
       <div>
         {cartItems.map((bike) => (
-          <li key={bike.id} data-test-id={`cart-product-${bike.id}`}>
+          <li key={`user-${bike.id}`} data-test-id={`cart-product-${bike.id}`}>
             <Image src={bike.img} width="200" height="100" alt="roadbike" />
           </li>
         ))}
