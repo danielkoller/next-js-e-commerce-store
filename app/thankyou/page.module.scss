@@ -41,7 +41,6 @@
   transform: translateZ(0);
   transition: filter 0.2s;
   user-select: none;
-  -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
@@ -68,7 +67,6 @@
 
   &:hover:not(:disabled) {
     filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
   }
 
   &:disabled {
