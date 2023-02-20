@@ -6,6 +6,8 @@ import { getBikes } from '../../database/database.js';
 import CartDelete from './Cart';
 import styles from './page.module.scss';
 
+export const dynamic = 'force dynamic';
+
 export default async function CartPage() {
   const allBikes = await getBikes();
   const bikesCookie = cookies().get('cart');

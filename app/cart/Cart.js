@@ -1,6 +1,6 @@
 'use client';
-import { setStringifiedCookie } from '/utils/cookies';
 import { useRouter } from 'next/navigation';
+import { setStringifiedCookie } from '../../utils/cookies';
 import styles from './page.module.scss';
 
 export default function CartDelete(props) {

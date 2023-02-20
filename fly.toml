@@ -1,4 +1,4 @@
-app = "e-commerce-store"
+app = "next-js-e-commerce-store"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []

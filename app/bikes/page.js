@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getBikes } from '../../database/database.js';
 import styles from './page.module.scss';
 
+export const dynamic = 'force dynamic';
+
 export default async function BikesPage() {
   const bikes = await getBikes();
   return (
