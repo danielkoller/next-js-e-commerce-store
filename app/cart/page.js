@@ -1,10 +1,10 @@
+// import TotalAmount from 'app/TotalAmount.tsx';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getBikes } from '../../database/database.js';
 import CartDelete from './Cart';
 import styles from './page.module.scss';
-import TotalAmount from './TotalAmount.tsx';
 
 export default async function CartPage() {
   const allBikes = await getBikes();
@@ -30,6 +30,11 @@ export default async function CartPage() {
     return bikeInCart;
   });
 
+  let total = 0;
+  bikesInCart.forEach((bike) => {
+    total += bike.price * bike.amount;
+  });
+
   const cartItems = bikesInCart.filter((bike) => bike.amount > 0);
 
   return (
@@ -42,7 +47,7 @@ export default async function CartPage() {
               key={`user-${bike.id}`}
               data-test-id={`cart-product-${bike.id}`}
             >
-              <Image src={bike.img} width="200" height="100" alt="roadbike" />
+              <Image src={bike.img} width="200" height="100" alt="bike" />
               <p>
                 <b>{bike.name}</b> <br />
                 {bike.price} €
@@ -61,7 +66,7 @@ export default async function CartPage() {
       </div>
       <div className={styles.buySection}>
         <p data-test-id="cart-total">
-          <b> Total:</b> <TotalAmount /> €
+          <b> Total:</b> {total} €
         </p>
         <Link className={styles.Link} href="/checkout">
           <button className={styles.buyButton} data-test-id="cart-checkout">

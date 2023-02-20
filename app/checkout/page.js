@@ -1,4 +1,4 @@
-import TotalAmount from 'app/cart/TotalAmount.tsx';
+// import TotalAmount from 'app/TotalAmount.tsx';
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import { getBikes } from '../../database/database.js';
@@ -28,6 +28,11 @@ export default async function CheckoutPage() {
     return bikeInCart;
   });
 
+  let total = 0;
+  bikesInCart.forEach((bike) => {
+    total += bike.price * bike.amount;
+  });
+
   const cartItems = bikesInCart.filter((bike) => bike.amount > 0);
 
   return (
@@ -42,7 +47,7 @@ export default async function CheckoutPage() {
                 key={`user-${bike.id}`}
                 data-test-id={`cart-product-${bike.id}`}
               >
-                <Image src={bike.img} width="200" height="100" alt="roadbike" />
+                <Image src={bike.img} width="200" height="100" alt="bike" />
                 <p>
                   <b>{bike.name}</b> <br />
                   {bike.price} €
@@ -54,9 +59,7 @@ export default async function CheckoutPage() {
             ))}
           </ul>
         </div>
-        <h4>
-          Total Sum: <TotalAmount /> € (Shipping Included)
-        </h4>
+        <h4>Total Sum: {total} € (Shipping Included)</h4>
         <h3>🛒 Shipping Details</h3>
         <form className={styles.checkoutForm} action="/thankyou">
           <label htmlFor="firstName">First Name</label>
