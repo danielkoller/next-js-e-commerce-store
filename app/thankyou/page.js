@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getBikes } from '../../database/database.js';
 import styles from './page.module.scss';
 
-export const dynamic = 'force dynamic';
+export const dynamic = 'force-dynamic';
 
 export default async function ThankyouPage() {
   const allBikes = await getBikes();
