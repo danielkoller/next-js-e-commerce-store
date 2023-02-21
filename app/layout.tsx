@@ -32,7 +32,7 @@ export default function RootLayout(props: Props) {
               Bikes
             </Link>
             <Link className={styles.cart} data-test-id="cart-link" href="/cart">
-              🛒 (<CartCount />)
+              🛒 (<CartCount data-test-id="cart-count" />)
             </Link>
           </nav>
         </header>

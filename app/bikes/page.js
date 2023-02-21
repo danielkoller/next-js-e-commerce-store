@@ -14,7 +14,10 @@ export default async function BikesPage() {
         {bikes.map((bike) => {
           return (
             <div className={styles.bikes} key={`user-${bike.id}`}>
-              <Link href={`/bikes/${bike.id}`}>
+              <Link
+                data-test-id={`product-${bike.id}`}
+                href={`/bikes/${bike.id}`}
+              >
                 <h2>{bike.name}</h2>
               </Link>
               <p>{bike.description}</p>
