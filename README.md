@@ -18,7 +18,13 @@ This is a simple bike webstore created with Next.js as part of the UpLeveled boo
 
 ## Screenshots
 
-## Setup instructions
+<img width="1415" alt="Landing Page" src="https://user-images.githubusercontent.com/15102417/220381538-d54652be-dc30-4444-852f-3927c9036e0a.png">
+
+<img width="1407" alt="Bike Page" src="https://user-images.githubusercontent.com/15102417/220381590-4950853c-87e1-4d3d-96f0-48104138cb1c.png">
+
+<img width="1407" alt="Thank you Page" src="https://user-images.githubusercontent.com/15102417/220381684-9d81623e-7713-4c4d-a098-f515243740db.png">
+
+## Setup instructions!
 
 1. Clone the project on your local machine (run each line individually):
 
