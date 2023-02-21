@@ -5,7 +5,11 @@ import CartCount from './CartCount';
 import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
-export default function RootLayout({ children }) {
+type Props = {
+  children: React.ReactNode;
+};
+
+export default function RootLayout(props: Props) {
   return (
     <html lang="en">
       {/*
@@ -32,7 +36,7 @@ export default function RootLayout({ children }) {
             </Link>
           </nav>
         </header>
-        {children}
+        {props.children}
         <footer className={styles.footer}>
           Treat yourself to premium bikes at a bargain price
         </footer>
