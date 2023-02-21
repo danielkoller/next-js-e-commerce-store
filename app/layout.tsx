@@ -5,7 +5,7 @@ import CartCount from './CartCount';
 import CookieBanner from './CookieBanner';
 import styles from './layout.module.scss';
 
-export default function RootLayout(props: Props) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/*
@@ -32,7 +32,7 @@ export default function RootLayout(props: Props) {
             </Link>
           </nav>
         </header>
-        {props.children}
+        {children}
         <footer className={styles.footer}>
           Treat yourself to premium bikes at a bargain price
         </footer>
